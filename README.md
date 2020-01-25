@@ -21,11 +21,11 @@ image: justintime50/apache-php:latest
 
 ## Docker Tags
 
-- latest - uses the latest explicitly requested release on the PHP Apache track.
-- 7.4 - uses the latest release on the PHP 7.4 Apache track.
-- 7.3 - uses the latest release on the PHP 7.3 Apache track.
-- 7.2 - uses the latest release on the PHP 7.2 Apache track.
-- dev - the testing branch for this image. Do not use this tag in production.
+- `latest` - uses the latest explicitly requested release on the PHP Apache track.
+- `7.4` - uses the latest release on the PHP 7.4 Apache track.
+- `7.3` - uses the latest release on the PHP 7.3 Apache track.
+- `7.2` - uses the latest release on the PHP 7.2 Apache track.
+- `dev` - the testing branch for this image. Do not use this tag in production.
 
 ## Building New Versions
 
@@ -37,6 +37,8 @@ Travis CI will automatically build and push supported tags to the Docker Hub on 
 
 ### Manual Builds
 
+```bash
 docker build -t justintime50/apache-php:7.3 --build-arg VERSION=7.3 .
 
 sudo docker push justintime50/apache-php:7.3
+```
