@@ -7,6 +7,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install mail server and turn on Apache rewrites
 RUN apt-get update \
     && apt-get -y install msmtp \
+    && docker-php-ext-install \
+        pdo_mysql \
     && a2enmod rewrite
 
 COPY ./config/php.ini /usr/local/etc/php/php.ini

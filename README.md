@@ -5,7 +5,7 @@
 
 A combined Apache/PHP Docker image.
 
-This image has `msmtp` installed and configured to send mail locally for testing via apps like `Mailcatcher`.
+This image has `msmtp` installed and configured to send mail locally for testing via apps like `Mailcatcher`. It also has `mysql_pdo` enabled to use with a `database`.
 
 ## Usage
 
