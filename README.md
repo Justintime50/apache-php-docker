@@ -5,17 +5,15 @@
 
 A combined Apache/PHP Docker image.
 
-This image has `msmtp` installed and configured to send mail locally for testing via apps like `Mailcatcher`. It also has `mysql_pdo` enabled to use with a `database`.
+This image has `msmtp` installed and configured to send mail locally for testing via apps like `Mailcatcher` which will work out of the box (if Mailcatcher container is titled `mailcatcher`). This image also has `mysql_pdo` enabled to use with a `database`. There is a sample `php.ini` file in the `config` folder. Additionally, there is a sample `.htaccess` file in the `src` folder which will remove `.php` file extensions from URLs.
 
 ## Usage
 
-Call this image from a Dockerfile or docker-compose file to easily deploy a single Nginx/PHP-FPM Docker container.
-
 ```bash
+# Dockerfile usage
 FROM: justintime50/apache-php:latest
 
-OR 
-
+# docker-compose usage
 image: justintime50/apache-php:latest
 ```
 
