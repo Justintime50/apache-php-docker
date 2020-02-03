@@ -23,6 +23,8 @@ image: justintime50/apache-php:latest
 - `7.4` - uses the latest release on the PHP 7.4 Apache track.
 - `7.3` - uses the latest release on the PHP 7.3 Apache track.
 - `7.2` - uses the latest release on the PHP 7.2 Apache track.
+- `7.1` - uses the latest release on the PHP 7.2 Apache track. - `Deprecated`
+- `7.0` - uses the latest release on the PHP 7.2 Apache track. - `Deprecated`
 - `dev` - the testing branch for this image. Do not use this tag in production.
 
 ## Building New Versions
