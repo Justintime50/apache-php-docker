@@ -4,13 +4,26 @@ FROM php:${VERSION}-apache
 # Run non-interactive
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install mail server, php mysql extension, and turn on Apache rewrites - cleanup at the end
-# hadolint ignore=DL3008
+# Instal MSMTP, GD, Zip, turn on rewrites, configure it all, and cleanup
+# hadolint ignore=DL3018,DL3008
 RUN apt-get update && apt-get install -y --no-install-recommends \
+        # Install mail server
         msmtp \
-    && docker-php-ext-install pdo_mysql \
+        # Install gd for image stuff
+        libssl-dev \
+        zlib1g-dev \
+        libpng-dev \
+        libjpeg-dev \
+        libfreetype6-dev \
+        # Install zip for csv stuff
+        libzip-dev \
+        zip \
+    && docker-php-ext-configure gd --with-jpeg=/usr/include/ --with-freetype=/usr/include/ \
+    && docker-php-ext-install \
+        pdo_mysql \
+        gd \
+        zip \
     && a2enmod rewrite \
-    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy some config files and a basic welcome screen
