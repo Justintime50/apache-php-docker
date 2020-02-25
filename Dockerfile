@@ -10,15 +10,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         # Install mail server
         msmtp \
         # Install gd for image stuff
-        libssl-dev \
-        zlib1g-dev \
-        libpng-dev \
-        libjpeg-dev \
         libfreetype6-dev \
+        libwebp-dev \
+        libjpeg-dev \
+        libpng-dev \
         # Install zip for csv stuff
         libzip-dev \
         zip \
-    && docker-php-ext-configure gd --with-jpeg=/usr/include/ --with-freetype=/usr/include/ \
+    && docker-php-ext-configure gd \
+        --with-jpeg=/usr/include \
+        --with-webp=/usr/include \
+        --with-freetype=/usr/include \
     && docker-php-ext-install \
         pdo_mysql \
         gd \
