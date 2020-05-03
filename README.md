@@ -1,6 +1,6 @@
 # Apache/PHP Docker Image
 
-[![Build Status](https://travis-ci.org/Justintime50/apache-php-docker.svg?branch=master)](https://travis-ci.org/Justintime50/apache-php-docker)
+[![Build Status](https://travis-ci.com/Justintime50/apache-php-docker.svg?branch=master)](https://travis-ci.com/Justintime50/apache-php-docker)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
 A combined Apache/PHP Docker image.
