@@ -1,9 +1,16 @@
+<div align="center">
+
 # Apache/PHP Docker Image
 
-[![Build Status](https://travis-ci.com/Justintime50/apache-php-docker.svg?branch=master)](https://travis-ci.com/Justintime50/apache-php-docker)
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
-
 A combined Apache/PHP Docker image.
+
+[![Build Status](https://travis-ci.com/Justintime50/apache-php-docker.svg?branch=master)](https://travis-ci.com/Justintime50/apache-php-docker)
+[![Docker Version](https://img.shields.io/docker/v/justintime50/apache-php)](https://hub.docker.com/repository/docker/justintime50/apache-php)
+[![Image Size](https://img.shields.io/docker/image-size/justintime50/apache-php)](https://hub.docker.com/repository/docker/justintime50/apache-php)
+[![Docker Pulls](https://img.shields.io/docker/pulls/justintime50/apache-php)](https://hub.docker.com/repository/docker/justintime50/apache-php)
+[![Licence](https://img.shields.io/github/license/justintime50/apache-php-docker)](LICENSE)
+
+</div>
 
 This image has `msmtp` installed and configured to send mail locally for testing via apps like `Mailcatcher` which will work out of the box (if Mailcatcher container is titled `mailcatcher`). This image also has `mysql_pdo` enabled to use with a `database`. There is a sample `php.ini` file in the `config` folder. Additionally, there is a sample `.htaccess` file in the `src` folder which will remove `.php` file extensions from URLs.
 
