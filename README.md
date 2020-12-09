@@ -12,21 +12,43 @@ A combined Apache/PHP Docker image.
 
 </div>
 
-This image has `msmtp` installed and configured to send mail locally for testing via apps like `Mailcatcher` which will work out of the box (if Mailcatcher container is titled `mailcatcher`). This image also has `mysql_pdo` enabled to use with a `database`. There is a sample `php.ini` file in the `config` folder. Additionally, there is a sample `.htaccess` file in the `src` folder which will remove `.php` file extensions from URLs.
+# Features
+
+* `PHP`.
+* `Apache` with mode rewrites enabled.
+* `msmtp` is installed and configured (see `config/msmtprc`) to send mail locally for testing via apps like `Mailcatcher` which will work out of the box (if Mailcatcher container is titled `mailcatcher`).  
+* `mysql_pdo` is installed as the driver for database connections. 
+* `gd` is installed for image processing.
+* `zip` is installed for items that may need that.
+
+## Install
+
+```bash
+# Dockerfile
+FROM: justintime50/apache-php:latest
+
+# docker-compose
+image: justintime50/apache-php:latest
+```
 
 ## Usage
 
-```bash
-# Dockerfile usage
-FROM: justintime50/apache-php:latest
+Place your site files into `/var/www/html` inside the container to get started with this image. This can be achieved by using a volume in a `docker-compose` file or by copying them in a `Dockerfile`.
 
-# docker-compose usage
-image: justintime50/apache-php:latest
+Want to give this image a spin? Simply run the following:
+
+```bash
+docker-compose up -d
 ```
+
+### Apache Configuration
+
+There is a sample `php.ini` file in the `config` folder. Additionally, there is a sample `.htaccess` file in the `src` folder which will remove `.php` file extensions from URLs.
 
 ## Docker Tags
 
 - `latest` - uses the latest explicitly requested release on the PHP Apache track.
+- `8.0` - uses the latest release on the PHP 8.0 Apache track.
 - `7.4` - uses the latest release on the PHP 7.4 Apache track.
 - `7.3` - uses the latest release on the PHP 7.3 Apache track.
 - `7.2` - uses the latest release on the PHP 7.2 Apache track.
@@ -38,11 +60,11 @@ image: justintime50/apache-php:latest
 
 This image supports swapping in the version number of PHP with a value from the official PHP Apache [tag list](https://hub.docker.com/_/php).
 
-### Automated Builds
+**Automated Builds**
 
 Travis CI will automatically build and push supported tags to the Docker Hub on each new commit to master.
 
-### Manual Builds
+**Manual Builds**
 
 ```bash
 docker build -t justintime50/apache-php:7.3 --build-arg VERSION=7.3 .
