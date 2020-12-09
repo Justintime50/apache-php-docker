@@ -1,16 +1,8 @@
 version: "3.7"
 services:
     apache-php:
-        build: .
-        restart: always
         container_name: apache-php
-        # volumes: 
-            # - ./src:/var/www/html
-            # - ./php-dev.ini:/usr/local/etc/php/php.ini
-            # - ./msmtprc:/etc/msmtprc
+        build: .
         ports:
-            - "80:80"
+            - "81:80"
             - "443:443"
-        # networks:
-            # - apache-php
-            # - mailcatcher # comment out if not testing mail
