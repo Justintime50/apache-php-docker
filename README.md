@@ -4,8 +4,7 @@
 
 A combined Apache/PHP Docker image.
 
-[![Build Status](https://travis-ci.com/Justintime50/apache-php-docker.svg?branch=master)](https://travis-ci.com/Justintime50/apache-php-docker)
-[![Docker Version](https://img.shields.io/docker/v/justintime50/apache-php)](https://hub.docker.com/repository/docker/justintime50/apache-php)
+[![Build Status](https://github.com/Justintime50/apache-php-docker/workflows/build/badge.svg)](https://github.com/Justintime50/apache-php-docker/actions)
 [![Image Size](https://img.shields.io/docker/image-size/justintime50/apache-php)](https://hub.docker.com/repository/docker/justintime50/apache-php)
 [![Docker Pulls](https://img.shields.io/docker/pulls/justintime50/apache-php)](https://hub.docker.com/repository/docker/justintime50/apache-php)
 [![Licence](https://img.shields.io/github/license/justintime50/apache-php-docker)](LICENSE)
@@ -14,12 +13,12 @@ A combined Apache/PHP Docker image.
 
 # Features
 
-* `PHP`.
-* `Apache` with mode rewrites enabled.
-* `msmtp` is installed and configured (see `config/msmtprc`) to send mail locally for testing via apps like `Mailcatcher` which will work out of the box (if Mailcatcher container is titled `mailcatcher`).  
-* `mysql_pdo` is installed as the driver for database connections. 
-* `gd` is installed for image processing.
-* `zip` is installed for items that may need that.
+* `PHP`
+* `Apache` with mode rewrites enabled
+* `msmtp` is installed and configured (see `config/msmtprc`) to send mail locally for testing via apps like `Mailcatcher` which will work out of the box (if Mailcatcher container is titled `mailcatcher`)f 
+* `mysql_pdo` is installed as the driver for database connections
+* `gd` is installed for image processing
+* `zip` is installed for items that may need that
 
 ## Install
 

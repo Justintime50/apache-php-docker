@@ -1,6 +1,19 @@
 # Changelog
 
-## 2020-12-08
+## v4 (2021-02-06)
+
+* Switched from Travis CI to GitHub Actions
+* Adopted new release workflow where each change simply iterates the version number since we provide images for various PHP versions
+
+## v3 (2020-12-08)
 
 * Added PHP 8.0 support
 * Updated documentation
+
+## v2 (2020)
+
+* Added backwards support for PHP 7.0 and 7.1
+
+## v1 (2020)
+
+* Initial release
