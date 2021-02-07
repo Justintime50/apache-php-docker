@@ -2,7 +2,7 @@ ARG VERSION=7.4
 FROM php:${VERSION}-apache
 
 # Run non-interactive
-ENV DEBIAN_FRONTEND=noninteractive
+ARG DEBIAN_FRONTEND=noninteractive
 
 # Install PHP packages and extensions
 # hadolint ignore=DL3018,DL3008
