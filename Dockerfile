@@ -19,9 +19,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     zip \
     # Configure image library
     && docker-php-ext-configure gd \
-    --with-jpeg=/usr/include \
-    --with-webp=/usr/include \
-    --with-freetype=/usr/include \
+    --with-jpeg \
+    --with-webp \
+    --with-freetype \
     # Configure PHP extensions for use in Docker
     && docker-php-ext-install \
     pdo_mysql \
