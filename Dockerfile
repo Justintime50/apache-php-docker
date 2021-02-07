@@ -1,8 +1,8 @@
-ARG VERSION=7.4
+ARG VERSION=8.0
 FROM php:${VERSION}-apache
 
 # Run non-interactive
-ENV DEBIAN_FRONTEND=noninteractive
+ARG DEBIAN_FRONTEND=noninteractive
 
 # Install PHP packages and extensions
 # hadolint ignore=DL3018,DL3008
@@ -19,9 +19,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     zip \
     # Configure image library
     && docker-php-ext-configure gd \
-    --with-jpeg=/usr/include \
-    --with-webp=/usr/include \
-    --with-freetype=/usr/include \
+    --with-jpeg \
+    --with-webp \
+    --with-freetype \
     # Configure PHP extensions for use in Docker
     && docker-php-ext-install \
     pdo_mysql \

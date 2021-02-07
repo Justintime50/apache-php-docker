@@ -4,8 +4,7 @@
 
 A combined Apache/PHP Docker image.
 
-[![Build Status](https://travis-ci.com/Justintime50/apache-php-docker.svg?branch=master)](https://travis-ci.com/Justintime50/apache-php-docker)
-[![Docker Version](https://img.shields.io/docker/v/justintime50/apache-php)](https://hub.docker.com/repository/docker/justintime50/apache-php)
+[![Build Status](https://github.com/Justintime50/apache-php-docker/workflows/build/badge.svg)](https://github.com/Justintime50/apache-php-docker/actions)
 [![Image Size](https://img.shields.io/docker/image-size/justintime50/apache-php)](https://hub.docker.com/repository/docker/justintime50/apache-php)
 [![Docker Pulls](https://img.shields.io/docker/pulls/justintime50/apache-php)](https://hub.docker.com/repository/docker/justintime50/apache-php)
 [![Licence](https://img.shields.io/github/license/justintime50/apache-php-docker)](LICENSE)
@@ -14,12 +13,12 @@ A combined Apache/PHP Docker image.
 
 # Features
 
-* `PHP`.
-* `Apache` with mode rewrites enabled.
-* `msmtp` is installed and configured (see `config/msmtprc`) to send mail locally for testing via apps like `Mailcatcher` which will work out of the box (if Mailcatcher container is titled `mailcatcher`).  
-* `mysql_pdo` is installed as the driver for database connections. 
-* `gd` is installed for image processing.
-* `zip` is installed for items that may need that.
+* `PHP`
+* `Apache` with mode rewrites enabled
+* `msmtp` is installed and configured (see `config/msmtprc`) to send mail locally for testing via apps like `Mailcatcher` which will work out of the box (if Mailcatcher container is titled `mailcatcher`)f 
+* `mysql_pdo` is installed as the driver for database connections
+* `gd` is installed for image processing
+* `zip` is installed for items that may need that
 
 ## Install
 
@@ -50,8 +49,8 @@ There is a sample `php.ini` file in the `config` folder. Additionally, there is 
 - `latest` - uses the latest explicitly requested release on the PHP Apache track.
 - `8.0` - uses the latest release on the PHP 8.0 Apache track.
 - `7.4` - uses the latest release on the PHP 7.4 Apache track.
-- `7.3` - uses the latest release on the PHP 7.3 Apache track.
-- `7.2` - uses the latest release on the PHP 7.2 Apache track.
+- `7.3` - uses the latest release on the PHP 7.3 Apache track. - `Deprecated`
+- `7.2` - uses the latest release on the PHP 7.2 Apache track. - `Deprecated`
 - `7.1` - uses the latest release on the PHP 7.1 Apache track. - `Deprecated`
 - `7.0` - uses the latest release on the PHP 7.0 Apache track. - `Deprecated`
 - `dev` - the testing branch for this image. Do not use this tag in production.
@@ -67,7 +66,7 @@ Travis CI will automatically build and push supported tags to the Docker Hub on 
 **Manual Builds**
 
 ```bash
-docker build -t justintime50/apache-php:7.3 --build-arg VERSION=7.3 .
+docker build -t justintime50/apache-php:8.0 --build-arg VERSION=8.0 .
 
-sudo docker push justintime50/apache-php:7.3
+sudo docker push justintime50/apache-php:8.0
 ```
