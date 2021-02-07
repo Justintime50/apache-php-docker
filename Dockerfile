@@ -1,4 +1,4 @@
-ARG VERSION=7.4
+ARG VERSION=8.0
 FROM php:${VERSION}-apache
 
 # Run non-interactive
