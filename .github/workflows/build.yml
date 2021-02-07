@@ -25,4 +25,3 @@ jobs:
           docker build -t apache-php:${{ matrix.imageversion }} --build-arg VERSION=${{ matrix.imageversion }} .
           docker run -d -it apache-php:${{ matrix.imageversion }}
           docker ps | grep -q apache-php:${{ matrix.imageversion }}
-        if: ${{ always() }}

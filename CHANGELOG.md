@@ -2,6 +2,7 @@
 
 ## v4 (2021-02-06)
 
+* Dropped support for PHP 7.0 - 7.3 due to GD changes that cannot build properly under those versions
 * Switched from Travis CI to GitHub Actions
 * Adopted new release workflow where each change simply iterates the version number since we provide images for various PHP versions
 
