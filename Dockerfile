@@ -4,7 +4,7 @@ FROM php:${VERSION}-apache
 # Run non-interactive
 ARG DEBIAN_FRONTEND=noninteractive
 
-SHELL ["/bin/sh", "-o", "pipefail", "-c"]
+SHELL ["/bin/ash", "-o", "pipefail", "-c"]
 
 # Install PHP packages and extensions
 # hadolint ignore=DL3018,DL3008
