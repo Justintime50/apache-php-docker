@@ -4,6 +4,8 @@ FROM php:${VERSION}-apache
 # Run non-interactive
 ARG DEBIAN_FRONTEND=noninteractive
 
+SHELL ["/bin/sh", "-o", "pipefail", "-c"]
+
 # Install PHP packages and extensions
 # hadolint ignore=DL3018,DL3008
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -29,6 +31,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     zip \
     # Enable Apache Rewrites
     && a2enmod rewrite \
+    # Install Composer
+    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     # Clean up
     && rm -rf /var/lib/apt/lists/*
 
